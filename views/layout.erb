@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>
+	      <%= @title || 'VideoBucket' %>
+	    </title>
+	     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+       <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css" rel="stylesheet">
+
+        <link href="/main.css" rel="stylesheet"></link>
+  </head>
+
+  <body>
+
+
+<!-- main content // new.erb form -->
+<div class="container-fluid">
+<!-- <header>
+
+
+  <h1><a href="/">VideoBucket<img src="/img/bucket.png"> </h1>
+
+
+</header> -->
+
+      <div class="row">
+<!--         <div class="col-sm-12"> -->
+            <%= yield %>
+         </div>
+       </div>
+</div>
+
+    <!--Boostrap & jQuery plugins-->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script src="/js/videoscript.js"></script>
+
+
+  </body>
+
+</html>

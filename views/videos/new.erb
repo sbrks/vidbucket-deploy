@@ -1,0 +1,68 @@
+<div class="container-fluid jumbotron">
+
+<div class="container header">
+<header>
+  <h1><a href="/">VideoBucket<img src="/img/bucket.png"  width="80px" ></a> </h1>
+
+</header>
+</div>
+
+
+  <div class="row">
+<div class="navbarmain">
+      <nav class="navbar navbar-default">
+        <ul class="nav nav-pills" style="background: white; color: white">
+          <li role="presentation" class="active" style="padding: 5px"><a href="/" hover="red">Home</a></li>
+          <li role="presentation" class="active" style="padding: 5px"><a href="/videos/new">Upload Video</a></li>
+          <li role="presentation" class="active" style="padding: 5px"><a href="#">Messages</a></li>
+          <li role="presentation" class="active" style="padding: 5px"><a href="/list">The List!</a></li>
+          <li role="presentation" class="active" style="padding: 5px"><a href="/about">About</a></li>
+          <li>  
+            <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+
+
+
+<div class="form-group-new">
+<div class="col-lg-12">
+<div class="col-md-8">
+<div class="col-sm-10">
+
+
+<form class = "form-horizontal" action="/videos" method="post" enctype="multipart/form-data">
+
+<fieldset>
+<legend><h2>Submit a New Video</h2></legend>
+  <strong>Username:</strong>
+  <input type="text" class="form-control" name="videos[username]"><br>
+  
+
+  <strong>Video URL:</strong>
+  <input type="text" class="form-control" name="videos[video_url]"><br>
+
+  <strong>Video Title:</strong>
+  <input type="text" class="form-control" name="videos[caption]"><br>
+
+  <strong>Description:</strong>
+<!--   <textarea name="textarea" rows="10" cols="50">Write Here</textarea> -->
+  <input type="text" class="form-control" name="videos[description]"><br>
+	
+	
+  <input type="submit" name="Submit">
+
+
+ </fieldset>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+

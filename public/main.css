@@ -1,0 +1,145 @@
+body { 
+	width: 100%;
+	background-color: lightblue;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+h1 {
+	margin: 20px;
+	color: red;
+	text-align: center;
+	font-size: 40px;
+}
+
+h1 a:hover {
+	text-decoration: none;
+	color: red;
+}
+
+h1 img {
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+
+.container-fluid { 
+	margin: 0 auto; 
+	background-color: white;
+	max-width: 960px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+
+}
+
+.navbar {
+	background-color: yellow;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+.panel-body {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+} 
+
+.panel-body iframe,
+.panel-body object,
+.panel-body embed {
+  position: absolute;
+  top: 0; left: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.panel-body-index {
+	display: inline-block;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.panel-body-index iframe,
+.panel-body-index object,
+.panel-body-index embed {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.panel-body-post {
+	display: inline;
+	position: relative;
+}
+
+.panel-body-post p {
+	margin: 5px 10px;
+}
+
+.panel-body-post h4 {
+	margin: 15px 10px 5px 10px;
+	text-decoration: underline;
+}
+
+form {
+	display: inline;
+}
+
+.page-header {
+	margin: 0 auto;
+	align-self: center;
+	text-align: center;
+	color: white;
+	width: 100%;
+}
+
+.page-header a {
+	color: white;
+}
+
+.page-header a:hover {
+	text-decoration: none;
+}
+
+.vid-buttons {
+	margin: 0 auto;
+	text-align: center;
+	align-self: center;
+	margin-bottom: 15px;
+	color: white;
+}
+
+.form-group-new{
+	text-align: center;
+	text-decoration: none;
+	margin: 0 25%;
+	width: 100%;
+	height: 80%;
+}
+
+.form-horizontal {
+	display: inline;
+	padding: 20px 10px;
+}
+
+
+
+.nav-pills>li.active.a {
+	color: yellow;
+}

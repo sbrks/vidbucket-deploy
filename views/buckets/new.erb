@@ -1,0 +1,39 @@
+
+
+
+
+
+<div class="form-group-new">
+<div class="col-lg-12">
+<div class="col-md-8">
+<div class="col-sm-10">
+<h1>VideoBucket<img src="/img/bucket.png"> </h1>
+
+<form class = "form-horizontal" action="/videos" method="post" enctype="multipart/form-data">
+
+<fieldset>
+<legend><h2>Submit a New Video</h2></legend>
+  <strong>Username:</strong>
+  <input type="text" class="form-control" name="videos[username]"><br>
+  
+
+  <strong>Video URL:</strong>
+  <input type="text" class="form-control" name="videos[video_url]"><br>
+
+  <strong>Video Title:</strong>
+  <input type="text" class="form-control" name="videos[caption]"><br>
+
+  <strong>Description:</strong>
+<!--   <textarea name="textarea" rows="10" cols="50">Write Here</textarea> -->
+  <input type="text" class="form-control" name="videos[description]"><br>
+	
+	
+  <input type="submit" name="Submit">
+
+
+ </fieldset>
+</form>
+</div>
+</div>
+</div>
+</div>

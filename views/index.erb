@@ -1,0 +1,96 @@
+<div class="container-fluid jumbotron">
+
+<div class="container header"
+<header>
+
+  <h1><a href="/">VideoBucket<img src="/img/bucket.png" width="80px"></a> </h1>
+
+</header>
+</div>
+
+
+  <div class="row">
+  <!--nav bar -->
+<div class="container-fluid jumbotron">
+  <div class="row">
+  <!--nav bar -->
+    <div class="navbarmain">
+      <nav class="navbar navbar-default">
+        <ul class="nav nav-pills" style="background: white; color: white">
+          <li role="presentation" class="active" style="padding: 5px"><a href="/" hover="red">Home</a></li>
+          <li role="presentation" class="active" style="padding: 5px"><a href="/videos/new">Upload Video</a></li>
+          <li role="presentation" class="active" style="padding: 5px"><a href="#">Messages</a></li>
+          <li role="presentation" class="active" style="padding: 5px"><a href="/list">The List!</a></li>
+          <li role="presentation" class="active" style="padding: 5px"><a href="/about">About</a></li>
+          <li>  
+            <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+
+<!--header -->
+    <div class="page-header">
+      <div>
+      <button class="btn btn-primary btn-large"> <a href="/videos/new">Upload Video</a></button>
+      </div>
+
+    </div>
+<!-- video container -->
+    <div class="videos">
+      <% @videos.each do |video| %>
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4><%= video.caption %></h4>
+              <h5>Posted by <%= video.username %> at <%= video.created_at %></h5>
+             
+            </div>
+
+
+            <div class="panel-body-index">
+
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.video_url.split("=").last %>" frameborder="0" allowfullscreen></iframe>
+            </div>
+<!-- 
+              <img src="http://img.youtube.com/vi/<%= @youtube_id %>/default.jpg" height="315" width="560"> -->
+
+        <div class="panel-body-post">
+<!--               <a href="<%= video.video_url %>"><%= video.video_url %></a> -->
+              <h4><%= video.caption %></h4>
+              <p><%= video.description %></p>
+            </div>
+
+<hr>
+
+            <div class="vid-buttons">
+              <a href="/videos/<%= video.id %>" class="btn btn-primary">Watch Video</a>
+              <!--edit button -->
+              <form method="put" action="/videos/<%= video.id %>/edit">
+                <input type="submit" value="Edit" class="btn btn-primary">
+              </form>
+              <!--delete button -->
+              <form method="post" action="/videos/<%= video.id %>/delete">
+                <input type="submit" value="Delete" class="btn btn-primary">
+              </form>
+            </div>
+
+
+          </div>
+              <% end %>
+        </div>
+  
+    </div>
+  </div>
+</div>
+
+
+
+

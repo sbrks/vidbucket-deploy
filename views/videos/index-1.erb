@@ -1,0 +1,84 @@
+<!--nav bar -->
+<div class="container-fluid">
+  <nav class="navbar navbar-default">
+      <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href="/">Home</a></li>
+        <li role="presentation"><a href="/videos/new">Upload Video</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+        <li>  <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+
+<!--header -->
+<div class="jumbotron">
+  <div class="container-fluid">
+    <div class="page-header">
+      <h1>VidBucket!</h1>
+        <medium>Upload bucket list videos</medium>
+    </div>
+
+<!--upload form -->
+<div class="form-group">
+<form class = "form-horizontal" action="/" method="post" enctype="multipart/form-data">
+
+  <strong>Username:</strong>
+  <input type="text" name="videos[username]"><br>
+  
+
+  <strong>Video URL:</strong>
+  <input type="text" name="videos[video_url]"><br>
+
+  <strong>Video Title:</strong>
+  <input type="text" name="videos[caption]"><br>
+
+  <strong>Description:</strong>
+  <input type="text" name="videos[description]"><br>
+
+  <input type="submit" name="Submit">
+<!--   <a href="#" class="btn btn-default">Default Cer Button</a> -->
+
+</form>
+</div>
+
+<!-- video container -->
+<div class="videos">
+  <% @videos.each do |video| %>
+    <div class="col-lg-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4><%= video.caption %></h4>
+          <h5>Posted by <%= video.username %></h5>
+        </div>
+      <div class="panel-body">
+
+        <p><%= video.video_url %></p>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @youtube_id %>" frameborder="0" allowfullscreen></iframe>
+
+        <!--video player -->
+    <!--       <div id="player"></div> -->
+         <!--end video player -->
+
+         <h4><%= video.caption %></h4>
+         <h4><%= video.description %></h4>
+
+          <a href="/videos/<%= video.id %>" class="btn btn-primary">Watch Video</a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<% end %>
+
+
+
